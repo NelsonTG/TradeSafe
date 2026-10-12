@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: data
+    database: TICKERS
+    schema: PUBLIC
+    tables:
+      - name: INITIAL
+

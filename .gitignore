@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.p8
+*.pem
+Thumbs.db
+Ingestion/stratch.py
+Ingestion/price.py
