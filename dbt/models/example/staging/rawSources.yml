@@ -6,4 +6,5 @@ sources:
     schema: PUBLIC
     tables:
       - name: INITIAL
+      - name: dailydata
 
