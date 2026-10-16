@@ -1,4 +1,5 @@
 import os, json, boto3
+import sys
 from massive import RESTClient
 
 client = RESTClient(os.environ["massiveKey"])
@@ -12,4 +13,7 @@ def ingest(day):
     s3.Object("massivedata1", key).put(Body=body)
     print(f"{day}: wrote {len(bars)} bars to {key}")
 if __name__ == "__main__":
-    ingest("2026-10-09")
+    if len(sys.argv) != 2:
+        print("Usage: python dailyIngest.py YYYY-MM-DD")
+        sys.exit(1)
+    ingest(sys.argv[1])
